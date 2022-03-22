@@ -27,27 +27,25 @@ img {
 }
 
 .todoContainer {
-  
 }
 
 .todoList {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .listItem {
   border: 1px solid black;
-  max-width: 50%;
+  /* max-width: 50%; */
+  /* align-items: flex-start; */
+  flex-direction: row;
+  font-size: 40px;
 }
 
 .button {
   margin: 5px;
-
-  /* position: absolute;
-  top: 50%;
-  right: 0;
-  width: 120px;
-  transform: translateY(-50%);
-} */
+}
 
 .toggle {
   color: green;

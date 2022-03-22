@@ -203,8 +203,8 @@ viewSelectedFilter filter =
             }
         ]
 
-applyCurrentFilter : Filter -> Todo -> Bool
-applyCurrentFilter filter todo =
+applyFilter : Filter -> Todo -> Bool
+applyFilter filter todo =
     case filter of
         All ->
             True
@@ -232,25 +232,23 @@ view model =
                                         |> List.indexedMap (\index -> viewTodo index )
             in
                 ol [ class "todoList" ] (List.indexedMap viewTodo model.todos)
+                -- Need to add Filter
         ]
 
 {-- 
 --Tries that failed above...
-                p [] [text "Missing todos"]
-                , ol [] List.indexedMap (\index viewTodo -> index model.todos)
-
-            , ol [] List.indexedMap (\index todos -> viewTodo index model.todos)
 
                 ol [] model.todos
-                    |> List.indexedMap (\index -> viewTodo index)
-
-                ol [] model.todos
-                        |> List.filter (applyCurrentFilter model.filter)
-                        |> List.indexedMap viewTodo
+                    |> List.filter (applyFilter model.filter)
+                    |> List.indexedMap viewTodo
 
                 ol [] todos
-                    |> List.filter (applyCurrentFilter model.filter)
-                    |> List.indexedMap (\index -> viewTodo index)
+                    |> List.filter (applyFilter model.filter)
+                    |> (List.indexedMap viewTodo model.todos)
+
+                ol [] model.todos
+                    |> List.filter (applyFilter model.filter)
+                    |> List.indexedMap viewTodo model.todos
 --}
 {--
 Below is made for each List.indexedMap from above.
