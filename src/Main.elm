@@ -5,7 +5,7 @@ import Html exposing (Html, text, div, h1, p, img, ul, ol, li, input, button, fi
 import Html.Attributes exposing (..)
 import Html.Events exposing (onSubmit, onClick, onInput)
 
--- https://dev.to/selbekk/creating-a-todo-app-in-elm-i3o
+
 ---- MODEL ----
 {--
 How are we going to model our State?
