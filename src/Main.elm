@@ -175,6 +175,10 @@ const toggleAtIndex = indexToToggle => todos =>
       : todo
   )
 --}
+{--
+This toggleAtIndex takes in a indexToToggle and a list
+it then then steps thru the List and toggles if it is completed or not
+--}
 
 
 toggleAtIndex indexToToggle list =
@@ -187,6 +191,12 @@ toggleAtIndex indexToToggle list =
                 todo
         )
         list
+
+
+
+{--
+
+--}
 
 
 viewRadioWithLabel : RadioWithLabelProps -> Html Msg
@@ -287,10 +297,6 @@ filterTodo filter todo =
 
 
 
-{--
---Tries that failed above...
-
---}
 {--
 Below is made for each List.indexedMap from above.
 --}
