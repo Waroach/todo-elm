@@ -220,7 +220,7 @@ applyCurrentFilter filter todo =
 
 view : Model -> Html Message
 view model =
-    div [ onSubmit AddTodo, class "todoContainer" ]
+    Html.form [ onSubmit AddTodo, class "todoContainer" ]
         [ h1 [] [ text "Brent's Todo's" ]
         , input [ value model.inputText, onInput ChangeInput, placeholder "Add a new item ..." ] []
         , viewSelectedFilter model.filter
